@@ -1296,6 +1296,16 @@ object FPatcher: TFPatcher
       5454543A3A585858463B063D00045A5A5A47045A00074758475847474700095A
       000B7B664747475A6666596558000001}
   end
+  object Gauge: TGauge
+    Left = 96
+    Top = 383
+    Width = 441
+    Height = 15
+    BackColor = clMenu
+    ForeColor = clNavy
+    Progress = 0
+    Visible = False
+  end
   object GroupOrigFileset: TGroupBox
     Left = 0
     Top = 72
