@@ -1,0 +1,43 @@
+SmartPatcher by riddick
+=======================
+
+P U R P O S E
+
+Let's say, you have downloaded a cracked version of CoolApp 1.0. You have the
+original program file CoolApp.exe and a cracked one CoolApp.cracked.exe . But
+now there's version 1.2 out and you don't have a crack for it. What do you do?
+
+SmartPatcher is the solution! It analyzes the changes made by the cracker to
+the v1.0 files and tries to apply the same changes to the new file. This works
+with *almost any* application if the versions don't differ too much.
+
+
+
+U S A G E
+
+Staying with the previously created example, you would select your original
+CoolApp.exe of version 1.0 as the "Original file", the cracked one as "Modified
+file" and the new version 1.2 of CoolApp.exe as "New file". Now click on
+"SmartPatch!" and take a look at the Messagebox. If you see some error lines
+about not finding the appropriate location, try to check "Extended Search" on
+your next try. (Restore the backup first.) Extended Search will do some more
+searching which could take much longer with huge files.
+
+
+
+L I M I T A T I O N S
+
+Although it worked in most cases for me, there can be files where it doesn't.
+Be warned that you use this software on your own risk. If you damage your
+files, your computer or whatever - don't blame me.
+
+
+
+C O N T A C T
+
+If you want to contact me, do so through the forum at www.p800stuff.com. My
+username there is "riddick".
+
+
+
+-riddick
