@@ -1458,6 +1458,7 @@ object FPatcher: TFPatcher
     ItemHeight = 13
     ParentCtl3D = False
     TabOrder = 3
+    OnDblClick = LogBoxDblClick
   end
   object ButtExit: TButton
     Left = 448
@@ -1467,6 +1468,21 @@ object FPatcher: TFPatcher
     Caption = 'Exit'
     TabOrder = 4
     OnClick = ButtExitClick
+  end
+  object ButtClear: TButton
+    Left = 504
+    Top = 227
+    Width = 33
+    Height = 14
+    Caption = 'Clear'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+    OnClick = ButtClearClick
   end
   object OpenDialog: TOpenDialog
     Filter = 

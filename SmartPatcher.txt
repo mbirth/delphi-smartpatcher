@@ -41,3 +41,12 @@ username there is "riddick".
 
 
 -riddick
+
+
+
+
+
+2004-07-29 (1.0.1.7)
+  NEW Double-clicking the status listbox copies its contents to the
+      Clipboard.
+  NEW "Clear"-button clears the status listbox.

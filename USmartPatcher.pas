@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, SysUtils, Controls, Forms, Dialogs, StdCtrls, ExtCtrls, Classes, Graphics, StrUtils, Math,
-  Gauges;
+  Gauges, Clipbrd;
 
 type
   TFPatcher = class(TForm)
@@ -31,12 +31,15 @@ type
     ImgLogoRiddickLeft: TImage;
     CheckExtSearch: TCheckBox;
     Gauge: TGauge;
+    ButtClear: TButton;
     procedure ButBrowseOrigClick(Sender: TObject);
     procedure ButtExitClick(Sender: TObject);
     procedure ButBrowseModClick(Sender: TObject);
     procedure ButtBrowseNewClick(Sender: TObject);
     procedure ButtSmartPatchClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure LogBoxDblClick(Sender: TObject);
+    procedure ButtClearClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -386,17 +389,35 @@ begin
   end;
 end;
 
-procedure TFPatcher.FormCreate(Sender: TObject);
+procedure InitLogBox;
 begin
-  Ver := TVersionInfo.Create(Application.ExeName);
-  Application.Title := 'SmartPatcher '+Ver.FileVersion;
-  FPatcher.Caption := 'SmartPatcher '+Ver.FileVersion;
+  FPatcher.LogBox.Clear;
   Log('Welcome to SmartPatcher by riddick');
   Log('');
   Log('NOTE: You can damage your files - use this app wisely!');
   Log(DupeString('-',140));
 end;
 
+procedure TFPatcher.FormCreate(Sender: TObject);
 begin
+  Ver := TVersionInfo.Create(Application.ExeName);
+  Application.Title := 'SmartPatcher '+Ver.FileVersion;
+  FPatcher.Caption := 'SmartPatcher '+Ver.FileVersion;
+  InitLogBox;
+end;
+
+procedure TFPatcher.LogBoxDblClick(Sender: TObject);
+var tmp: String;
+begin
+  FPatcher.LogBox.Items.Delimiter := Chr(255);
+  tmp := FPatcher.LogBox.Items.DelimitedText;
+  tmp := StringReplace(tmp, Chr(255), Chr(13)+Chr(10), [rfReplaceAll]);
+  Clipboard.AsText := tmp;
+end;
+
+procedure TFPatcher.ButtClearClick(Sender: TObject);
+begin
+  InitLogBox;
+end;
 
 end.

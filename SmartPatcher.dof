@@ -115,7 +115,7 @@ AutoIncBuild=1
 MajorVer=1
 MinorVer=0
 Release=1
-Build=6
+Build=7
 Debug=0
 PreRelease=0
 Special=1
@@ -126,7 +126,7 @@ CodePage=1252
 [Version Info Keys]
 CompanyName=riddick
 FileDescription=SmartPatcher for new versions of cracked software.
-FileVersion=1.0.1.6
+FileVersion=1.0.1.7
 InternalName=SmartPatcher
 LegalCopyright=
 LegalTrademarks=
